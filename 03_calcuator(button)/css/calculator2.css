@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+html {
+  font-size: 16px;
+}
+
+:root {
+  --footer-h: 32px;
+}
+
+/* 「*」はユニバーサルセレクタ（すべての要素を対象にするセレクタ）でbox-sizing: border-box;を指定 */
+/* この指定（してい）はborderとpaddingをボックスサイズ（widthとheight）の中に含めて算出するので、スタイリングがしやすい*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  color: rgb(73, 72, 72);
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+  background: #EEEEEE;
+  overflow: hidden;
+}
+
+/*******************************************************/
+/* ヘッダー                                             */
+/*******************************************************/
+h1 {
+  font-size: 2.7em;
+  /*　修正 */
+  color: rgb(212, 26, 184);
+  text-align: center;
+  margin: 14px 0 6px;
+
+  /* 追加 */
+  .wrapper>p {
+    margin: 6px 0 10px;
+  }
+
+  /* 追加 */
+  .f-container {
+    margin-bottom: 12px;
+  }
+
+  /* 追加 */
+
+}
+
+/*******************************************************/
+/* 計算機全体                                           */
+/*******************************************************/
+
+.f-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 220px;
+  height: 320px;
+  justify-content: center;
+  /*アイテムを上下中央揃えで配置*/
+  align-items: center;
+  /*アイテムを上下中央揃えで配置*/
+}
+
+.f-box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 220px;
+  height: 320px;
+  justify-content: center;
+  /*アイテムを上下中央揃えで配置*/
+  align-items: center;
+  /*アイテムを上下中央揃えで配置*/
+}
+
+.f-item {
+  margin: 0;
+  padding: 0;
+  width: calc(196px / 4);
+  height: calc(258px / 5);
+  font-size: 2em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.btn {
+  display: inline-block;
+  color: whitesmoke;
+  border: solid 0.02px rgb(241, 241, 241);
+  border-bottom: solid 4px grey;
+  border-radius: 10px;
+  background: rgb(212, 26, 184);
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn:active {
+  transform: translateY(4px);
+  /*下に動く*/
+  border-bottom: none;
+  /*線を消す*/
+}
+
+#calLog {
+  width: 196px;
+  font-size: 16px;
+  color: rgb(173, 170, 170);
+  border: none;
+  text-align: right;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: auto;
+}
+
+#result {
+  width: 196px;
+  color: grey;
+  border: solid 1px grey;
+  text-align: right;
+
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: auto;
+}
+
+#cancel {
+  width: 147px;
+}
+
+#num0 {
+  width: 147px;
+}
+
+/*******************************************************/
+/* フッター                                             */
+/*******************************************************/
+footer>p {
+  position: fixed;
+  /*←絶対位置*/
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  /*下に固定*/
+  height: var(--footer-h);
+  line-height: var(--footer-h);
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  color: whitesmoke;
+  font: 16px Rajdhani;
+  text-align: center;
+  background: rgba(1, 24, 31, 0.7);
+}
+
+.wrapper {
+  min-height: calc(100vh - var(--footer-h));
+  margin: 0;
+  padding: 0;
+  padding-bottom: calc(var(--footer-h) + 8px);
+  text-align: center;
+}
+
+.mgn-01 {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/*******************************************************/
+/* class=back                                         */
+/* id=btn99 backボタン                                 */
+/*******************************************************/
+.back {
+  text-align: left;
+}
+
+#btn99 {
+  padding: 0.5em;
+  border-radius: 0.3em;
+  color: whitesmoke;
+  font-size: 1.5em;
+  background: rgb(212, 26, 184);
+  cursor: pointer;
+  /*カーソルをポインターの形（かたち）にする*/
+}
+
+/*追加*/
+#calLog {
+  font-size: 12px;
+  color: #8b8f99;
+  letter-spacing: .3px;
+  margin: 0 auto 6px;
+  border: 0;
+}
+
+#result {
+  border-radius: 10px;
+  background: #fff;
+}
