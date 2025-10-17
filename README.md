@@ -1,2 +1,1 @@
-# mobileapp1
-mobile application 
+# mobile-app
