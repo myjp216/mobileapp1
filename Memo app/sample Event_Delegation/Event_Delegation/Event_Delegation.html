@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation（イベントの委任）</title>
+    <meta name="description" content="Event Delegation（イベントの委任）">
+
+    <link rel="icon" href="hint.ico">
+    <link rel="stylesheet" href="css/Event_Delegation.css">
+  </head>
+
+  <body>
+    <header id = "top">
+      <h1>Event Delegation</br>イベントの委任</h1>
+    </header>
+
+    <main>
+
+
+      <!-- 【ＮＧパターン】動的な行に関してイベントリスナーが機能しない。 -->
+      <section class = "container">
+        <h2>【ＮＧ】動的に増減する要素に対応できない</br>class="trash"をaddEventListner</h2>
+
+        <div class="btn-area">
+            <input id="add1" type="submit" class="btn" value="追加">
+        </div>
+        
+        <table id="table1">
+          <thead>
+            <tr>
+              <th class="width30">No.</th>
+              <th class="width10">削除</th>
+            </tr>
+          </thead>
+          <tbody id="list1">
+          </tbody>
+        </table>
+        <div class="filler01"></div>
+      </section>
+
+      <div class="filler01"></div>
+
+      <!-- 【ＯＫパターン】 親要素に設定したイベントリスナーで、子要素で発生したイベントを処理する-->
+      <section class = "container">
+        <h2>【ＯＫ】動的に増減する要素に対応する<br>親要素class="table2"をaddEventListner</h2>
+
+        <div class="btn-area">
+            <input id="add2" type="submit" class="btn" value="追加">
+        </div>
+        
+        <table id="table2">
+          <thead>
+            <tr>
+              <th class="width30">No.</th>
+              <th class="width10">削除</th>
+            </tr>
+          </thead>
+          <tbody id="list2">
+          </tbody>
+        </table>
+        <div class="filler01"></div>
+      </section>
+
+
+    </main>
+
+    <script src="js/Event_Delegation.js"></script>
+  </body>
+</html>
